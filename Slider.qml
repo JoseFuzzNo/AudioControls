@@ -8,6 +8,7 @@ Item {
 
     property color color: "#aabbdd"
     property color secondColor: "#444444"
+    property color thirdColor: "#aaaaaa"
     property double from: 0
     property double to: 1
     property double value: 0
@@ -19,7 +20,7 @@ Item {
     property int decimals: 0
     property bool mouseEnabled: true
 
-    property int orientation: root.width > root.height ? Qt.Horizontal : Qt.Vertical
+    readonly property int orientation: root.width > root.height ? Qt.Horizontal : Qt.Vertical
 
     width: 150
     height: 20
@@ -129,7 +130,14 @@ Item {
 
     Text {
         id: valueText
+
         visible: showValue
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+        z:102
+        color: thirdColor
+        font.pointSize: 8
+
         text: {
             if ( units === "" )
                 return value.toFixed( decimals )
@@ -150,11 +158,7 @@ Item {
             }
         }
 
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
-        z:102
-        color: "white"
-        font.pointSize: 8
+
     }
 
     Text {
