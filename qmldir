@@ -1,0 +1,15 @@
+module AudioControls
+
+Bang 1.0 Bang.qml
+Keyboard 1.0 Keyboard.qml
+Knob 1.0 Knob.qml
+Matrix 1.0 Matrix.qml
+Number 1.0 Number.qml
+Number2 1.0 Number2.qml
+Slider 1.0 Slider.qml
+Symbol 1.0 Symbol.qml
+TextButton 1.0 TextButton.qml
+Toggle 1.0 Toggle.qml
+VuMeter 1.0 VuMeter.qml
+
+designersupported
